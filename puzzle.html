@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle Games - GameLift</title>
+    <meta name="description" content="Browse our collection of brain teasing puzzle games including the classic 2048, match-3 puzzles and other mind-bending challenges. Exercise your brain while having fun!">
+    <meta name="keywords" content="puzzle games, brain games, mind games, 2048, match-3 puzzles, logic games, online puzzles">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="bg-gray-900 text-white py-3 sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-4 flex flex-wrap justify-between items-center">
+            <a href="../index.html" class="text-2xl font-bold flex items-center">
+                <span class="text-blue-400">Game</span><span class="text-green-400">Lift</span>
+            </a>
+            
+            <button id="mobile-menu-button" class="md:hidden p-2 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            
+            <div id="nav-links" class="hidden md:flex md:items-center w-full md:w-auto mt-4 md:mt-0">
+                <div class="md:flex md:space-x-6 flex-col md:flex-row space-y-3 md:space-y-0">
+                    <a href="../index.html" class="block hover:text-blue-400">Home</a>
+                    <a href="../categories/puzzle.html" class="block hover:text-blue-400 font-medium">Puzzle Games</a>
+                    <a href="../categories/arcade.html" class="block hover:text-blue-400">Casual Games</a>
+                    <a href="../categories/strategy.html" class="block hover:text-blue-400">Strategy Games</a>
+                    <a href="../categories/action.html" class="block hover:text-blue-400">Action Games</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Title Banner -->
+    <header class="bg-gradient-to-r from-teal-500 to-green-500 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Puzzle Games</h1>
+            <p class="text-xl md:text-2xl text-gray-100">Train your brain with challenging logic games</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Category Introduction -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">About Puzzle Games</h2>
+            <p class="text-gray-600">
+                Puzzle games are designed to exercise your brain through problem-solving, pattern recognition, logic, and creativity. These games offer a perfect balance of challenge and entertainment, helping to improve cognitive abilities while providing a satisfying gaming experience. Our collection of puzzle games includes classic number puzzles, tile-matching games, and many other brain teasers suitable for all ages and skill levels.
+            </p>
+        </div>
+
+        <!-- 2048 Game Showcase -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800">2048 - Number Puzzle Game</h2>
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="p-4 bg-gray-100">
+                    <p class="text-gray-700 mb-4">2048 is an addictive number puzzle game where you combine identical tiles to create larger numbered tiles. The goal is to reach the 2048 tile, but the challenge continues beyond that for high score chasers. It's a perfect blend of strategy and luck that will keep you engaged for hours.</p>
+                </div>
+                <div class="w-full">
+                    <iframe src="https://play2048.co/" style="width:100%; height:700px; border:none; max-width:1200px; margin:0 auto; display:block;" scrolling="no" frameborder="0" allowfullscreen></iframe>
+                    <p class="text-center text-gray-500 p-2">Game loading may take some time, please be patient...</p>
+                </div>
+                <div class="p-6 bg-gray-100">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-800">Game Features</h3>
+                            <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                                <li>Simple but addictive gameplay</li>
+                                <li>Progressive difficulty that adapts to your skill</li>
+                                <li>Score tracking and personal records</li>
+                                <li>Clean, minimalist design</li>
+                                <li>Works on both mobile and desktop</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-800">How to Play</h3>
+                            <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                                <li>Use arrow keys or swipe to move tiles</li>
+                                <li>When two tiles with the same number touch, they merge into one</li>
+                                <li>Each move spawns a new tile (2 or 4) randomly on the board</li>
+                                <li>Plan your moves to avoid filling the board</li>
+                                <li>Try to reach the 2048 tile to win!</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game List -->
+        <div class="mb-8">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800">More Puzzle Games</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Sudoku Game Card -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <a href="#">
+                        <img src="https://placehold.co/600x400/058c42/ffffff?text=Sudoku" alt="Sudoku" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-1">Sudoku Challenge</h3>
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-yellow-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                </div>
+                                <span class="text-xs text-gray-500 ml-1">(105)</span>
+                            </div>
+                            <p class="text-sm text-gray-600 line-clamp-2">Classic number puzzle game with multiple difficulty levels to test your logic skills.</p>
+                            <div class="mt-3 flex justify-between items-center">
+                                <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Puzzle</span>
+                                <span class="text-sm bg-gray-800 hover:bg-gray-700 text-white px-3 py-1 rounded">Coming Soon</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Match-3 Jewels Game Card -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <a href="#">
+                        <img src="https://placehold.co/600x400/9b5de5/ffffff?text=Match+3" alt="Match 3 Jewels" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-1">Jewel Match 3</h3>
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-yellow-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                </div>
+                                <span class="text-xs text-gray-500 ml-1">(87)</span>
+                            </div>
+                            <p class="text-sm text-gray-600 line-clamp-2">Match colorful jewels in groups of three or more to score points and clear levels.</p>
+                            <div class="mt-3 flex justify-between items-center">
+                                <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Puzzle</span>
+                                <span class="text-sm bg-gray-800 hover:bg-gray-700 text-white px-3 py-1 rounded">Coming Soon</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Word Puzzle Game Card -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <a href="#">
+                        <img src="https://placehold.co/600x400/f15bb5/ffffff?text=Word+Search" alt="Word Search" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-1">Word Search Deluxe</h3>
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-yellow-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                </div>
+                                <span class="text-xs text-gray-500 ml-1">(76)</span>
+                            </div>
+                            <p class="text-sm text-gray-600 line-clamp-2">Find hidden words in all directions in this challenging word search puzzle game with various themes.</p>
+                            <div class="mt-3 flex justify-between items-center">
+                                <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Puzzle</span>
+                                <span class="text-sm bg-gray-800 hover:bg-gray-700 text-white px-3 py-1 rounded">Coming Soon</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Jigsaw Puzzle Game Card -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <a href="#">
+                        <img src="https://placehold.co/600x400/00bbf9/ffffff?text=Jigsaw+Puzzle" alt="Jigsaw Puzzle" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-1">Jigsaw Puzzles</h3>
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-yellow-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                </div>
+                                <span class="text-xs text-gray-500 ml-1">(98)</span>
+                            </div>
+                            <p class="text-sm text-gray-600 line-clamp-2">Classic jigsaw puzzles with beautiful images and adjustable difficulty levels. A relaxing way to train your brain.</p>
+                            <div class="mt-3 flex justify-between items-center">
+                                <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Puzzle</span>
+                                <span class="text-sm bg-gray-800 hover:bg-gray-700 text-white px-3 py-1 rounded">Coming Soon</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-10">
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-4">About Us</h3>
+                    <p class="text-gray-400">GameLift is dedicated to providing players with high-quality online gaming experiences, including classic Chinese traditional games and modern casual games.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="../games" class="text-gray-400 hover:text-white">All Games</a></li>
+                        <li><a href="../about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="../contact.html" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Game Categories</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../categories/puzzle.html" class="text-gray-400 hover:text-white">Puzzle Games</a></li>
+                        <li><a href="../categories/arcade.html" class="text-gray-400 hover:text-white">Casual Games</a></li>
+                        <li><a href="../categories/strategy.html" class="text-gray-400 hover:text-white">Strategy Games</a></li>
+                        <li><a href="../categories/action.html" class="text-gray-400 hover:text-white">Action Games</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <span class="sr-only">Facebook</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <span class="sr-only">Twitter</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <span class="sr-only">Instagram</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 GameLift. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const navLinks = document.getElementById('nav-links');
+
+        mobileMenuButton.addEventListener('click', () => {
+            navLinks.classList.toggle('hidden');
+            navLinks.classList.toggle('block');
+        });
+
+        // Always show menu on large screens
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) { // md breakpoint
+                navLinks.classList.remove('hidden');
+                navLinks.classList.add('flex');
+            } else {
+                navLinks.classList.add('hidden');
+                navLinks.classList.remove('block');
+            }
+        });
+    </script>
+</body>
+</html> 
